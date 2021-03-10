@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container{
+                width: 100%;
+                height: auto;
+            }
+            .cir{
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                margin: 20px;
+                display:inline-block;
+                text-align:center;
+            }
+
+            #c1{
+                background-color: blue;
+            }
+            #c2{
+                background-color: blueviolet;
+            }
+
+            .cir:nth-child(3){
+                background-color: burlywood;
+            }
+            .cir:nth-child(4){
+                background-color: cornflowerblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="cir" id="c1"> 1 </div>
+            <div class="cir" id="c2"> 2 </div>
+            <div class="cir" id="c3"> 3 </div>
+            <div class="cir" id="c4"> 4 </div>
+        </div>
+    </body>
+</html>
