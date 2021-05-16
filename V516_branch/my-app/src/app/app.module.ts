@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { ParksComponent } from './parks/parks.component';
 import { ParkDetailComponent } from './park-detail/park-detail.component';
 import { ProductsComponent } from './products/products.component';
-import { ProductsDetailComponent } from './products-detail/products-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,12 @@ import { ProductsDetailComponent } from './products-detail/products-detail.compo
     ParksComponent,
     ParkDetailComponent,
     ProductsComponent,
-    ProductsDetailComponent
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,14 @@
 <p>products works!</p>
+<div *ngFor="let product of products;let i=index">
+    <h3> <a (click)="selectedItem(product)">  {{i+1}} :{{product.name}} </a></h3>
+    <div *ngIf="product.description">
+        {{product.description}}
+    </div>
+    <div>
+        {{product.price}}
+    </div>
+
+</div>
+<div *ngIf="selectedProduct">
+   <app-product-detail [product]="selectedProduct"></app-product-detail>
+</div>
