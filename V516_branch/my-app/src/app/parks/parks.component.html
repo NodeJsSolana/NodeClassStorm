@@ -1,1 +1,8 @@
-<p>parks works!</p>
+
+<div *ngFor="let park of parks">
+  <h4> {{park.id}}: {{park.name}} </h4>
+
+  <img src="assets/img/thumbs/{{park.image}}">
+
+</div>
+

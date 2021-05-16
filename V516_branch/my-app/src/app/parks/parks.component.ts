@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {ParksService} from '../parks.service'
 @Component({
   selector: 'app-parks',
   templateUrl: './parks.component.html',
@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParksComponent implements OnInit {
 
-  constructor() { }
+  parks:any;
+
+
+  constructor(private parkservice:ParksService) {
+    this.parkservice.getParks().then(data=> {this.parks=data})
+  }
 
   ngOnInit(): void {
   }
