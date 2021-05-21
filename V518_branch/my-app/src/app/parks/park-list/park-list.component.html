@@ -1,1 +1,29 @@
-<p>park-list works!</p>
+<div class="container">
+  <div class="header">
+    <h5>US National Parks</h5>
+    <input type="search" [(ngModel)]="searchString" placeholder="search">
+  <button class="btn btn-primary" (click) ="getParks()">
+  search
+  </button>
+  </div>
+  <div class="body">
+    <div class="park" *ngFor="let park of parks">
+
+    <h4 class="park-title"> {{park.id}}:{{park.name}}</h4>
+
+    <img clas = "side" src="assets/img/thumbs/{{park.image}}">
+
+    <div class="center">
+      <h4>State:{{park.state}}</h4>
+      <h6>(lat,long): {{park.lat}}, {{park.long}}</h6>
+    </div>
+
+    <div class="right">
+      <a routerLink="/park/{{park.id}}">
+        <span class="badge bg-primary rounded-pill">> detail </span>
+      </a>
+    </div>
+  </div>
+
+  </div>
+</div>

@@ -1,1 +1,14 @@
-<p>park-detail works!</p>
+<div class="card" *ngIf="thePark">
+  <div class="header" >
+  <button class="btn btn-info btn-lg" style="font-size: 20px" (click)="goBack()">
+  back
+  </button>
+  <h1>{{thePark.name}}</h1>
+  </div>
+  <div class="body img" >
+  <img src="assets/img/headers/{{thePark.image}}">
+  </div>
+  <div class="footer">
+  <h5>{{thePark.data}}</h5>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+*{
+  box-sizing:border-box;
+ }
+ .container {
+  display:grid;
+  width:100%;
+  height:auto;
+  grid-template-columns: minmax(200px,30%);
+  grid-template-rows:80px 200px auto;
+  row-gap:1em;
+  column-gap:1em;
+ }
+
+ .card {
+  display:grid;
+  width:100%;
+  height:auto;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows:80px 200px auto;
+  row-gap:1em;
+  column-gap:1em;
+ }
+ .header, .body{
+  grid-column:span 6;
+ }
+ img {
+  max-width: 100%;
+  height: auto;
+ }
